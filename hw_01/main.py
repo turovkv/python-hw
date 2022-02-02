@@ -1,21 +1,28 @@
 import ast
 import inspect
 
-import astunparse
-import networkx as nx
 import matplotlib.pyplot as plt
-import pydot
+import networkx as nx
 from networkx.drawing.nx_pydot import graphviz_layout
 
+from ast_visitor import Visitor
 from fibonacci import get_fib_list
-from graph_builder import Visitor
 
 
 def print_ast():
     ast_object = ast.parse(inspect.getsource(get_fib_list))
     v = Visitor()
     v.visit(ast_object)
-    nx.draw(v.graph, pos=graphviz_layout(v.graph, prog="dot"), with_labels=True, labels=v.labels, font_size=8)
+    plt.figure(1, (15, 10))
+    nx.draw(
+        G=v.graph,
+        pos=graphviz_layout(v.graph, prog="dot"),
+        with_labels=True,
+        labels=v.labels,
+        node_shape='o',
+        node_size=v.sizes,
+        node_color=v.colors,
+        font_size=8)
     plt.savefig("artifacts/graph.png")
 
 
