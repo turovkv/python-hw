@@ -2,15 +2,6 @@ import ast
 
 import networkx as nx
 
-color = {
-    1: "tab:red",
-    2: "tab:orange",
-    3: "tab:olive",
-    4: "tab:green",
-    5: "tab:blue",
-    6: "tab:purple",
-}
-
 
 class Visitor(ast.NodeVisitor):
     def __init__(self):
