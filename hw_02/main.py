@@ -1,5 +1,8 @@
+import os
 from functools import reduce
 from typing import List
+
+import astprintfib
 
 
 def gen_latex_table(list: List[List[str]]) -> str:
@@ -41,8 +44,14 @@ def gen_latex_table(list: List[List[str]]) -> str:
            f'\\end{{tabular}}\n'
 
 
+def get_latex_fib_picture():
+    astprintfib.print_ast(astprintfib.get_fib_list, "artifacts/ast.png")
+    return f'\\includegraphics[width=\\linewidth]{{{"artifacts/ast.png"}}}\n'
+
+
 def gen_latex_document(content: str) -> str:
     return f'\\documentclass{{article}}\n' \
+           f'\\usepackage{{graphicx}}\n' \
            f'\\begin{{document}}\n' \
            f'{content}' \
            f'\\end{{document}}\n'
@@ -57,5 +66,10 @@ if __name__ == "__main__":
                      ["11", "22", "33"],
                      ["111", "222", "333"]]
                 )
+                +
+                get_latex_fib_picture()
             )
         )
+    os.system(f"pdflatex -output-directory=artifacts artifacts/table.tex")
+    os.system(f"rm artifacts/table.aux artifacts/table.log")
+
