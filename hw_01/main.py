@@ -9,8 +9,8 @@ from ast_visitor import Visitor
 from fibonacci import get_fib_list
 
 
-def print_ast():
-    ast_object = ast.parse(inspect.getsource(get_fib_list))
+def print_ast(obj, path_to_save):
+    ast_object = ast.parse(inspect.getsource(obj))
     v = Visitor()
     v.visit(ast_object)
     plt.figure(1, (15, 10))
@@ -23,8 +23,8 @@ def print_ast():
         node_size=v.sizes,
         node_color=v.colors,
         font_size=8)
-    plt.savefig("artifacts/graph.png")
+    plt.savefig(path_to_save)
 
 
 if __name__ == "__main__":
-    print_ast()
+    print_ast(get_fib_list, "artifacts/graph.png")
