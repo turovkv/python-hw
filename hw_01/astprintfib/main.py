@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import networkx as nx
 from networkx.drawing.nx_pydot import graphviz_layout
 
-from ast_visitor import Visitor
-from fibonacci import get_fib_list
+from astprintfib.ast_visitor import Visitor
+from astprintfib.fibonacci import get_fib_list
 
 
 def print_ast(obj, path_to_save):
