@@ -1,10 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name="fib-ast-print",
+    name="fibastprint",
     version="0.1.0",
-    packages=find_packages(),
-    description="fib-ast-print",
+    packages=['fibastprint'],
+    description="fibastprint",
     url="https://github.com/turovkv/python-hw/tree/main/hw_01",
     author="turovkv",
     author_email="turovkv@yandex.ru",
@@ -15,8 +15,8 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     install_requires=[
-        "networkx",
-        "matplotlib",
-        "pydot",
+        "networkx~=2.6.3",
+        "matplotlib~=3.5.1",
+        "pydot~=1.4.2",
     ],
 )
