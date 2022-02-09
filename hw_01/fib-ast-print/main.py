@@ -27,4 +27,4 @@ def print_ast(obj, path_to_save):
 
 
 if __name__ == "__main__":
-    print_ast(get_fib_list, "artifacts/graph.png")
+    print_ast(get_fib_list, "./../artifacts/graph.png")
