@@ -3,8 +3,16 @@ import copy
 import numpy as np
 
 
-class Matrix:
+class HashMixin:
+    def __hash__(self):
+        return sum(map(sum, self.arr))
+
+
+class Matrix(HashMixin):
+    _cache = {}
+
     def __init__(self, arr=None, rows=None, cols=None):
+        super().__init__()
         if arr is not None:
             self.arr = copy.deepcopy(arr)
         else:
@@ -37,12 +45,16 @@ class Matrix:
     def __matmul__(self, o):
         if self.cols() != o.rows():
             raise Exception("Invalid argument")
-        res = Matrix(rows=self.rows(), cols=o.cols())
-        for i in range(self.rows()):
-            for j in range(o.cols()):
-                for k in range(self.cols()):
-                    res.arr[i][j] += self.arr[i][k] * o.arr[k][j]
-        return res
+        key = (hash(self), hash(o))
+        if key not in Matrix._cache:
+            res = Matrix(rows=self.rows(), cols=o.cols())
+            for i in range(self.rows()):
+                for j in range(o.cols()):
+                    for k in range(self.cols()):
+                        res.arr[i][j] += self.arr[i][k] * o.arr[k][j]
+            Matrix._cache[key] = res
+        print(Matrix._cache)
+        return Matrix._cache[key]
 
     def __str__(self):
         s = ""
@@ -59,10 +71,20 @@ class Matrix:
 
 
 if __name__ == '__main__':
-    np.random.seed(0)
-    m1 = Matrix(np.random.randint(0, 10, (10, 10)))
-    m2 = Matrix(np.random.randint(0, 10, (10, 10)))
-    print(m2)
-    (m1 + m2).save_to_file("artifacts/easy/matrix+.txt")
-    (m1 * m2).save_to_file("artifacts/easy/matrix*.txt")
-    (m1 @ m2).save_to_file("artifacts/easy/matrix@.txt")
+    A = Matrix(arr=[[1, 2], [3, 4]])
+    B = Matrix(arr=[[1, 0], [0, 1]])
+    C = Matrix(arr=[[3, 4], [1, 2]])
+    D = Matrix(arr=[[1, 0], [0, 1]])
+
+    A.save_to_file("artifacts/hard/A.txt")
+    B.save_to_file("artifacts/hard/B.txt")
+    C.save_to_file("artifacts/hard/C.txt")
+    D.save_to_file("artifacts/hard/D.txt")
+
+    CD = C @ D
+    AB = A @ B
+    CD.save_to_file("artifacts/hard/CD.txt")
+    AB.save_to_file("artifacts/hard/AB.txt")
+
+    with open("artifacts/hard/hash.txt", 'w') as f:
+        f.write(f'{hash(AB)}\n{hash(CD)}')
