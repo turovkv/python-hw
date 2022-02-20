@@ -57,3 +57,13 @@ class Matrix:
     def save_to_file(self, filename):
         with open(filename, 'w') as f:
             f.write(self.__str__())
+
+
+if __name__ == '__main__':
+    np.random.seed(0)
+    m1 = Matrix(np.random.randint(0, 10, (10, 10)))
+    m2 = Matrix(np.random.randint(0, 10, (10, 10)))
+    print(m2)
+    (m1 + m2).save_to_file("artifacts/easy/matrix+.txt")
+    (m1 * m2).save_to_file("artifacts/easy/matrix*.txt")
+    (m1 @ m2).save_to_file("artifacts/easy/matrix@.txt")
