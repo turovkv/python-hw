@@ -1,0 +1,99 @@
+/home/kirill/Documents/HSE/HOMEWORK/python-hw/hw_04/venv/bin/python /home/kirill/Documents/HSE/HOMEWORK/python-hw/hw_04/medium.py
+--- start integrate_mp n_jobs=1
+start integrate (f, a=0.0, b=1.5707963267948966, n_iter=300000000) with process 52888
+end integrate (f, a=0.0, b=1.5707963267948966, n_iter=300000000) with process 52888, time=30.086334943771362
+--- end integrate_mp n_jobs=1
+1.000000002617913
+--- start integrate_mp n_jobs=2
+start integrate (f, a=0.0, b=0.7853981633974483, n_iter=150000000) with process 52903
+start integrate (f, a=0.7853981633974483, b=1.5707963267948966, n_iter=150000000) with process 52904
+end integrate (f, a=0.0, b=0.7853981633974483, n_iter=150000000) with process 52903, time=16.009353637695312
+end integrate (f, a=0.7853981633974483, b=1.5707963267948966, n_iter=150000000) with process 52904, time=16.206866025924683
+--- end integrate_mp n_jobs=2
+1.0000000026178522
+--- start integrate_mp n_jobs=3
+start integrate (f, a=0.0, b=0.5235987755982988, n_iter=100000000) with process 52907
+start integrate (f, a=0.5235987755982988, b=1.0471975511965976, n_iter=100000000) with process 52908
+start integrate (f, a=1.0471975511965976, b=1.5707963267948966, n_iter=100000000) with process 52909
+end integrate (f, a=0.0, b=0.5235987755982988, n_iter=100000000) with process 52907, time=13.516221761703491
+end integrate (f, a=0.5235987755982988, b=1.0471975511965976, n_iter=100000000) with process 52908, time=13.731257915496826
+end integrate (f, a=1.0471975511965976, b=1.5707963267948966, n_iter=100000000) with process 52909, time=13.74660348892212
+--- end integrate_mp n_jobs=3
+1.0000000026179505
+--- start integrate_mp n_jobs=4
+start integrate (f, a=0.0, b=0.39269908169872414, n_iter=75000000) with process 52920
+start integrate (f, a=0.39269908169872414, b=0.7853981633974483, n_iter=75000000) with process 52921
+start integrate (f, a=0.7853981633974483, b=1.1780972450961724, n_iter=75000000) with process 52922
+start integrate (f, a=1.1780972450961724, b=1.5707963267948966, n_iter=75000000) with process 52923
+end integrate (f, a=0.0, b=0.39269908169872414, n_iter=75000000) with process 52920, time=11.500044822692871
+end integrate (f, a=0.39269908169872414, b=0.7853981633974483, n_iter=75000000) with process 52921, time=11.661999702453613
+end integrate (f, a=0.7853981633974483, b=1.1780972450961724, n_iter=75000000) with process 52922, time=11.7864408493042
+end integrate (f, a=1.1780972450961724, b=1.5707963267948966, n_iter=75000000) with process 52923, time=11.88314175605774
+--- end integrate_mp n_jobs=4
+1.0000000026180422
+--- start integrate_mp n_jobs=5
+start integrate (f, a=0.0, b=0.3141592653589793, n_iter=60000000) with process 52926
+start integrate (f, a=0.3141592653589793, b=0.6283185307179586, n_iter=60000000) with process 52927
+start integrate (f, a=0.6283185307179586, b=0.9424777960769379, n_iter=60000000) with process 52928
+start integrate (f, a=0.9424777960769379, b=1.2566370614359172, n_iter=60000000) with process 52929
+start integrate (f, a=1.2566370614359172, b=1.5707963267948966, n_iter=60000000) with process 52930
+end integrate (f, a=0.3141592653589793, b=0.6283185307179586, n_iter=60000000) with process 52927, time=10.48869776725769
+end integrate (f, a=1.2566370614359172, b=1.5707963267948966, n_iter=60000000) with process 52930, time=10.54318118095398
+end integrate (f, a=0.6283185307179586, b=0.9424777960769379, n_iter=60000000) with process 52928, time=10.656349897384644
+end integrate (f, a=0.0, b=0.3141592653589793, n_iter=60000000) with process 52926, time=14.758711814880371
+end integrate (f, a=0.9424777960769379, b=1.2566370614359172, n_iter=60000000) with process 52929, time=14.986040830612183
+--- end integrate_mp n_jobs=5
+1.0000000026180635
+--- start integrate_mp n_jobs=6
+start integrate (f, a=0.0, b=0.2617993877991494, n_iter=50000000) with process 52953
+start integrate (f, a=0.2617993877991494, b=0.5235987755982988, n_iter=50000000) with process 52954
+start integrate (f, a=0.5235987755982988, b=0.7853981633974483, n_iter=50000000) with process 52955
+start integrate (f, a=0.7853981633974483, b=1.0471975511965976, n_iter=50000000) with process 52956
+start integrate (f, a=1.0471975511965976, b=1.308996938995747, n_iter=50000000) with process 52957
+start integrate (f, a=1.308996938995747, b=1.5707963267948966, n_iter=50000000) with process 52958
+end integrate (f, a=0.2617993877991494, b=0.5235987755982988, n_iter=50000000) with process 52954, time=10.612309694290161
+end integrate (f, a=0.0, b=0.2617993877991494, n_iter=50000000) with process 52953, time=10.681068897247314
+end integrate (f, a=0.5235987755982988, b=0.7853981633974483, n_iter=50000000) with process 52955, time=11.679585933685303
+end integrate (f, a=1.0471975511965976, b=1.308996938995747, n_iter=50000000) with process 52957, time=12.032520294189453
+end integrate (f, a=1.308996938995747, b=1.5707963267948966, n_iter=50000000) with process 52958, time=13.895728588104248
+end integrate (f, a=0.7853981633974483, b=1.0471975511965976, n_iter=50000000) with process 52956, time=14.083980798721313
+--- end integrate_mp n_jobs=6
+1.000000002618059
+--- start integrate_mp n_jobs=7
+start integrate (f, a=0.0, b=0.2243994752564138, n_iter=42857143) with process 52961
+start integrate (f, a=0.2243994752564138, b=0.4487989505128276, n_iter=42857143) with process 52962
+start integrate (f, a=0.4487989505128276, b=0.6731984257692414, n_iter=42857143) with process 52963
+start integrate (f, a=0.6731984257692414, b=0.8975979010256552, n_iter=42857143) with process 52964
+start integrate (f, a=0.8975979010256552, b=1.121997376282069, n_iter=42857143) with process 52965
+start integrate (f, a=1.121997376282069, b=1.3463968515384828, n_iter=42857143) with process 52966
+start integrate (f, a=1.3463968515384828, b=1.5707963267948966, n_iter=42857143) with process 52967
+end integrate (f, a=1.121997376282069, b=1.3463968515384828, n_iter=42857143) with process 52966, time=7.6951704025268555
+end integrate (f, a=0.0, b=0.2243994752564138, n_iter=42857143) with process 52961, time=11.918197870254517
+end integrate (f, a=0.2243994752564138, b=0.4487989505128276, n_iter=42857143) with process 52962, time=11.953469514846802
+end integrate (f, a=0.4487989505128276, b=0.6731984257692414, n_iter=42857143) with process 52963, time=14.287197828292847
+end integrate (f, a=0.6731984257692414, b=0.8975979010256552, n_iter=42857143) with process 52964, time=14.29097056388855
+end integrate (f, a=0.8975979010256552, b=1.121997376282069, n_iter=42857143) with process 52965, time=14.352360963821411
+end integrate (f, a=1.3463968515384828, b=1.5707963267948966, n_iter=42857143) with process 52967, time=14.641591310501099
+--- end integrate_mp n_jobs=7
+1.0000000026179834
+--- start integrate_mp n_jobs=8
+start integrate (f, a=0.0, b=0.19634954084936207, n_iter=37500000) with process 52979
+start integrate (f, a=0.19634954084936207, b=0.39269908169872414, n_iter=37500000) with process 52980
+start integrate (f, a=0.39269908169872414, b=0.5890486225480862, n_iter=37500000) with process 52981
+start integrate (f, a=0.5890486225480862, b=0.7853981633974483, n_iter=37500000) with process 52982
+start integrate (f, a=0.7853981633974483, b=0.9817477042468103, n_iter=37500000) with process 52983
+start integrate (f, a=0.9817477042468103, b=1.1780972450961724, n_iter=37500000) with process 52984
+start integrate (f, a=1.1780972450961724, b=1.3744467859455345, n_iter=37500000) with process 52986
+start integrate (f, a=1.3744467859455345, b=1.5707963267948966, n_iter=37500000) with process 52985
+end integrate (f, a=0.19634954084936207, b=0.39269908169872414, n_iter=37500000) with process 52980, time=14.419429063796997
+end integrate (f, a=0.0, b=0.19634954084936207, n_iter=37500000) with process 52979, time=14.486671209335327
+end integrate (f, a=1.1780972450961724, b=1.3744467859455345, n_iter=37500000) with process 52986, time=14.754510641098022
+end integrate (f, a=0.39269908169872414, b=0.5890486225480862, n_iter=37500000) with process 52981, time=14.946532249450684
+end integrate (f, a=1.3744467859455345, b=1.5707963267948966, n_iter=37500000) with process 52985, time=14.970675706863403
+end integrate (f, a=0.7853981633974483, b=0.9817477042468103, n_iter=37500000) with process 52983, time=15.07539176940918
+end integrate (f, a=0.5890486225480862, b=0.7853981633974483, n_iter=37500000) with process 52982, time=15.265522241592407
+end integrate (f, a=0.9817477042468103, b=1.1780972450961724, n_iter=37500000) with process 52984, time=15.399993658065796
+--- end integrate_mp n_jobs=8
+1.0000000026179812
+
+Process finished with exit code 0
