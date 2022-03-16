@@ -19,13 +19,14 @@ def worker_b(a_to_b: Queue, b_to_main: Queue):
 def main_in(main_to_a):
     while True:
         val = input()
-        main_to_a.put(val)
         print(datetime.now().strftime("%H:%M:%S") + " <-- " + val)
+        main_to_a.put(val)
 
 
 def main_out(b_to_main):
     while True:
-        print(datetime.now().strftime("%H:%M:%S") + " --> " + b_to_main.get())
+        val = b_to_main.get()
+        print(datetime.now().strftime("%H:%M:%S") + " --> " + val)
 
 
 def main():
